@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: web-app-deployment
+  namespace: test
+  labels:
+    app: web-app
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: web-app
+
+  template:
+    metadata:
+      labels:
+        app: web-app
+
+    spec:
+      containers:
+        - name: web-app
+          image: dheena7603/app:v10
+          ports:
+            - containerPort: 3000
