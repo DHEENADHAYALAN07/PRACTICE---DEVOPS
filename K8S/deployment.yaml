@@ -22,6 +22,6 @@ spec:
     spec:
       containers:
         - name: web-app
-          image: dheena7603/app:v10
+          image: dheena7603/kubernetes-app:7
           ports:
             - containerPort: 3000
